@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shan | Website & Google Listing சேவை - நாகப்பட்டினம்</title>
+<meta name="description" content="சிறு தொழில்களுக்கு Website மற்றும் Google Business Profile அமைத்துத் தருகிறேன். நாகப்பட்டினம், தமிழ்நாடு.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* ====== இங்கே உங்கள் விவரங்களை மாற்றவும்: பக்கத்தின் கீழே CONFIG பகுதி பாருங்கள் ====== */
+:root{
+  --sea:#0B3C5D; --sea-d:#072a42; --sun:#F2A900; --paper:#F6F9FB; --ink:#10212e; --mute:#5b6b78; --line:#d9e2e9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans Tamil',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.8;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{background:var(--sea-d);color:#fff;position:sticky;top:0;z-index:10}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:12px;padding-bottom:12px}
+header b{font-weight:800;font-size:19px}
+header nav a{margin-left:18px;text-decoration:none;font-size:15px;opacity:.9}
+header nav a:hover{opacity:1;color:var(--sun)}
+.btn{display:inline-block;background:var(--sun);color:#1b1400;font-weight:800;padding:12px 24px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:16px}
+.btn.alt{background:transparent;color:#fff;border:2px solid #ffffff66;margin-left:10px}
+/* hero */
+.hero{background:var(--sea);color:#fff;padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(28px,4.6vw,46px);line-height:1.35;font-weight:800;margin-bottom:16px}
+.hero p{opacity:.88;margin-bottom:26px;max-width:46ch}
+/* google listing mock - முக்கிய காட்சி */
+.listing{background:#fff;color:var(--ink);border-radius:14px;padding:18px;box-shadow:0 18px 40px #00000040}
+.listing .photo{height:120px;border-radius:8px;background:repeating-linear-gradient(45deg,#e6edf2,#e6edf2 10px,#dbe5ec 10px,#dbe5ec 20px);display:grid;place-items:center;color:var(--mute);font-size:14px}
+.listing h3{margin-top:12px;font-size:18px}
+.stars{color:var(--sun);letter-spacing:2px}
+.listing small{color:var(--mute);display:block}
+.chips{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.chips span{border:1px solid var(--line);border-radius:20px;padding:2px 12px;font-size:14px}
+.chips .on{background:#e8f1f8;border-color:#b7d0e3;font-weight:600}
+.tag{font-size:13px;color:#fff;background:#1c7c4f;display:inline-block;padding:0 10px;border-radius:4px;margin-top:10px}
+/* sections */
+section{padding:64px 0}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;margin-bottom:10px;line-height:1.4}
+.sub{color:var(--mute);margin-bottom:30px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.proj{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.proj .shot{aspect-ratio:16/10;background:linear-gradient(135deg,var(--sea),#1d6a96);display:grid;place-items:center;color:#ffffffcc;font-weight:800;padding:12px;text-align:center}
+.proj img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.proj div.b{padding:16px 18px 20px}
+.proj h3{font-size:18px}
+.proj p{font-size:15px;color:var(--mute);margin:4px 0 10px}
+.proj a{font-weight:600;color:var(--sea);font-size:15px}
+.services{background:#fff;border-block:1px solid var(--line)}
+.svc{border-left:4px solid var(--sun);padding:4px 0 4px 16px}
+.svc h3{font-size:18px}.svc p{font-size:15px;color:var(--mute)}
+/* pricing */
+.price{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px}
+.price.hot{border:2px solid var(--sea)}
+.price h3{font-size:19px}
+.price .amt{font-size:30px;font-weight:800;color:var(--sea);margin:6px 0 12px}
+.price ul{list-style:none;font-size:15px}
+.price li{padding:5px 0;border-top:1px solid var(--line)}
+.price li::before{content:"✓ ";color:#1c7c4f;font-weight:800}
+.note{font-size:14px;color:var(--mute);margin-top:16px}
+/* about + contact */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact{background:var(--sea-d);color:#fff;text-align:center}
+.contact p{opacity:.85;margin:0 auto 24px;max-width:50ch}
+footer{background:#051c2d;color:#ffffff99;text-align:center;padding:18px;font-size:14px}
+.wa{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;font-weight:800;text-decoration:none;padding:12px 18px;border-radius:30px;box-shadow:0 6px 18px #0004;z-index:20}
+@media(max-width:760px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  header nav a:not(:last-child){display:none}
+  .btn.alt{margin:10px 0 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <b>Shan</b>
+    <nav><a href="#work">வேலைகள்</a><a href="#services">சேவைகள்</a><a href="#price">கட்டணம்</a><a href="#contact">தொடர்புக்கு</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>உங்கள் கடையை Google-ல் தேடுபவர்கள் உங்களிடமே வர வேண்டும்.</h1>
+      <p>நாகப்பட்டினம் பகுதி சிறு தொழில்களுக்கு Website மற்றும் Google Business Profile அமைத்துத் தருகிறேன். முதலில் இலவச audit.</p>
+      <a class="btn" data-wa="வணக்கம், இலவச Google audit வேண்டும்." href="#">இலவச audit கேளுங்கள்</a>
+      <a class="btn alt" href="#work">என் வேலைகளைப் பாருங்கள்</a>
+    </div>
+    <div class="listing" aria-label="Google listing மாதிரி">
+      <div class="photo">உங்கள் கடை புகைப்படம்</div>
+      <h3>உங்கள் கடையின் பெயர்</h3>
+      <span class="stars">★★★★★</span> <small>4.8 · 126 reviews · நாகப்பட்டினம்</small>
+      <small>திறந்திருக்கிறது · இரவு 9 மணி வரை</small>
+      <div class="chips"><span class="on">அழைக்க</span><span class="on">வழி காட்டு</span><span class="on">Website</span></div>
+      <span class="tag">இப்படி இருந்தால் வாடிக்கையாளர் வருவார்</span>
+    </div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <h2>நான் உருவாக்கிய websites</h2>
+    <p class="sub">உண்மையான தொழில்களுக்காக உருவாக்கிய projects.</p>
+    <div class="grid" id="projects"></div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <h2>என்ன செய்து தருகிறேன்</h2>
+    <p class="sub">தொழிலுக்குத் தேவையானதை மட்டும், எளிமையாக.</p>
+    <div class="grid">
+      <div class="svc"><h3>Google Business Profile</h3><p>புகைப்படம், நேரம், போன் எண், சேவைகள் அனைத்தும் சரியாக அமைத்து, reviews வர வழி செய்கிறேன்.</p></div>
+      <div class="svc"><h3>Website உருவாக்கம்</h3><p>மொபைலில் நன்றாகத் திறக்கும், WhatsApp பட்டன் உள்ள website. தமிழ் மற்றும் ஆங்கிலத்தில்.</p></div>
+      <div class="svc"><h3>Booking / Enquiry வசதி</h3><p>ஹோட்டல், கிளினிக், மண்டபம் போன்றவற்றுக்கு online booking மற்றும் enquiry form.</p></div>
+      <div class="svc"><h3>மாதாந்திர பராமரிப்பு</h3><p>மாற்றங்கள், புதிய புகைப்படங்கள், Google posts மற்றும் மாதாந்திர report.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <h2>கட்டண விவரம்</h2>
+    <p class="sub">மறைமுகக் கட்டணம் இல்லை. வேலை தொடங்கும் முன் 50% முன்பணம்.</p>
+    <div class="grid">
+      <div class="price"><h3>Google Setup</h3><div class="amt">₹2,500 - ₹5,000</div>
+        <ul><li>Business Profile அமைப்பு</li><li>புகைப்படம், நேரம், சேவைகள்</li><li>Review கேட்க QR / link</li></ul></div>
+      <div class="price hot"><h3>Website + Google</h3><div class="amt">₹8,000 - ₹15,000</div>
+        <ul><li>5 பக்கம் website</li><li>Google Business Profile</li><li>WhatsApp மற்றும் Map இணைப்பு</li><li>1 வருட domain வழிகாட்டுதல்</li></ul></div>
+      <div class="price"><h3>மாதாந்திர பராமரிப்பு</h3><div class="amt">₹2,000 - ₹5,000 / மாதம்</div>
+        <ul><li>Website மாற்றங்கள்</li><li>Google posts மற்றும் photos</li><li>மாத முடிவில் report</li></ul></div>
+    </div>
+    <p class="note">தேவைக்கேற்ப விலை மாறும். இலவச audit-க்குப் பிறகு சரியான விலை சொல்கிறேன்.</p>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap about">
+    <div>
+      <h2>என்னைப் பற்றி</h2>
+      <p>நான் Shan, நாகப்பட்டினத்தில் இருந்து செயல்படுகிறேன். சொந்தமாக Xerox கடை நடத்துகிறேன், Flipkart-ல் விற்பனை செய்கிறேன். ஒரு சிறு கடையின் தேவை என்ன என்று எனக்கு நேரடியாகத் தெரியும்.</p>
+    </div>
+    <div>
+      <h2>ஏன் என்னிடம்?</h2>
+      <p>உள்ளூரிலேயே இருப்பதால் நேரில் சந்தித்துப் பேசலாம். தமிழில் தெளிவாக விளக்குவேன். முடிவுகளை (calls, views, enquiries) screenshot-ஆகக் காட்டுவேன்.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>உங்கள் கடையை இலவசமாக audit செய்கிறேன்</h2>
+    <p>உங்கள் கடை Google Maps-ல் எப்படித் தெரிகிறது என்று 5 நிமிடத்தில் சொல்கிறேன். WhatsApp-ல் செய்தி அனுப்புங்கள்.</p>
+    <a class="btn" data-wa="வணக்கம், என் கடையை audit செய்ய வேண்டும்." href="#">WhatsApp-ல் பேசுங்கள்</a>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Shan · நாகப்பட்டினம், தமிழ்நாடு</footer>
+<a class="wa" data-wa="வணக்கம்" href="#">WhatsApp</a>
+
+<script>
+/* ================= CONFIG: இங்கு மட்டும் மாற்றவும் ================= */
+const WHATSAPP = "918489424109";   // உங்கள் எண்: 91 + 10 இலக்கம், இடைவெளி இல்லாமல்
+
+const PROJECTS = [
+  // image: screenshot கோப்பு பெயர் (எ.கா. "images/resort.png"). இல்லையென்றால் "" விடவும்.
+  {name:"Kadal Nila Resort", desc:"Resort booking website: அறை முன்பதிவு மற்றும் email இணைப்பு.", image:"", link:""},
+  {name:"நாகை திருமணத் தகவல் மையம்", desc:"Matrimony website: profile, தேடல், admin பகுதி.", image:"", link:""},
+  {name:"கடல்நிலா பஞ்சாங்கம்", desc:"தமிழ் பஞ்சாங்கம் app: தினசரி நாள் விவரங்கள்.", image:"", link:""},
+  {name:"LocalConnect", desc:"உள்ளூர் தொழில்கள் மற்றும் விளம்பர directory.", image:"", link:""},
+  {name:"SRM Traders", desc:"Promotional gifts தொழிலுக்கான website மற்றும் admin.", image:"", link:""},
+  {name:"TN CSC Operators Association", desc:"சங்க website: பொது பக்கங்கள் மற்றும் admin panel.", image:"", link:""}
+];
+/* =================================================================== */
+
+const box = document.getElementById('projects');
+box.innerHTML = PROJECTS.map(p => `
+  <article class="proj">
+    ${p.image ? `<img src="${p.image}" alt="${p.name} screenshot" loading="lazy">` : `<div class="shot">${p.name}</div>`}
+    <div class="b">
+      <h3>${p.name}</h3><p>${p.desc}</p>
+      ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener">Website பார்க்க</a>` : ''}
+    </div>
+  </article>`).join('');
+
+document.querySelectorAll('[data-wa]').forEach(a => {
+  a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(a.dataset.wa)}`;
+  a.target = "_blank"; a.rel = "noopener";
+});
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
